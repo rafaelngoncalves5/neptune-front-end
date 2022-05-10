@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Neptune, the Eighth</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="backforward-container">
+            <a href="page1.html"><img src="backarrow.png" class="backarrow"></a>    <!-- Voltar -->
+        </div>
+        <span id="arrowtip"><img src="arrowtip.png"></span>
+
+        <article id="arrowTextContainer">
+            <p>left and right arrows will return you to the last and next page respectively.<button id="okbtn" onclick="okFunc()">>></button></p>
+        </article>
+        <article id="tourtext-container">
+            <blockquote>
+                <h1>Some facts about Neptune</h1>
+                <p>
+                    <strong>Neptune</strong> has an average surface temperature of -214°C – approximately -353°F.
+                </p>
+                <p>    
+                    <strong>Neptune</strong> spins very quickly on its axis. The planets equatorial clouds take 18 hours to complete one rotation. The reason this happens is that Neptune does not have a solid body.
+                </p>
+                <p>
+                    <strong>Neptune</strong> Neptune is the Roman God of the Sea. In Greek, Neptune is called Poseidon.
+                </p>
+                <p>
+                    <strong>Neptune</strong> has the second largest gravity of any planet in the solar system – second only to Jupiter.
+                </p>
+                <p>
+                    <strong>Neptune</strong> has 14 known moons. The largest of these moons is Titan – a frozen world which spits out particles of nitrogen ice and dust from below its surface. It is believed that Titan was caught by the immense gravitational pull of Neptune and is regarded as one of the coldest worlds in our solar system.
+                </p>
+                <button id="okbtn2" onclick="okFunc2()">>></button>
+            </blockquote>
+        </article>
+        <article id="tourtext-container2">
+            <blockquote>
+                <h1>Interior</h1>
+                <p>The interior of Neptune, similar to that of Uranus, is made of two layers: a core and mantle. The core is rocky and estimated to be 1.2 times as massive as the Earth. The mantle is an extremely hot and dense liquid composed of water, ammonia and methane. The mantle is between ten to fifteen times the mass of the Earth. Although Neptune and Uranus share similar interiors, they are, however, quite distinct in one way. Whereas Uranus emits only about the same amount of heat that it receives from the Sun, Neptune emits nearly 2.61 times the amount of the sunlight it receives. To place this in perspective, the two planets’ surface temperatures are approximately equal, yet Neptune receives only 40% of the sunlight that Uranus does. Additionally, this large internal heat is also what powers the extreme winds found in the upper atmosphere.<a href="https://theplanets.org/neptune/">Neptune Facts.</a></p>
+                <cite>Stewart, Suzy. Neptune Facts. The Planets. Retrieved from https://theplanets.org/neptune/.</cite>
+            </blockquote>
+        </article>
+        <main>
+            <img src="neptunerotatinggif.gif" alt="neptunerotatinggif" id="neptune2">
+        </main>
+
+        <script>       
+        function arrowTipFunc() {
+            let arrowTip = document.getElementById('arrowtip');
+            let arrowTextContainer = document.getElementById('arrowTextContainer');
+
+            setInterval(function(){arrowTip.style.opacity = 0}, 6000);
+            }
+            function okFunc() {
+                let arrowTextContainer = document.getElementById('arrowTextContainer');
+                arrowTextContainer.style.opacity = 0;
+            }
+            var otcV = false;
+
+            function okFunc2() {
+                let tourtextContainer = document.getElementById('tourtext-container');
+                tourtextContainer.style.opacity = 0;
+
+                otcV = true;
+
+                if(otcV == true) {
+                    let tourtextContainer2 =  document.getElementById('tourtext-container2');      // Insert tourtext-container2
+                    tourtextContainer2.style.display = 'flex';
+                }
+            }
+            arrowTipFunc();
+
+        </script>
+    </body>
+</html>

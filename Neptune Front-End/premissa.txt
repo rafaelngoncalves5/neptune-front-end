@@ -1,0 +1,4 @@
+Site para praticar diversas técnicas de CSS, HTML e JavaScript, especialmente CSS Animations. A temática é simples: uma jornada por Netuno, de maneira interativa, fluída e visualmente atraente;
+
+Fonte principal:
+https://theplanets.org/neptune/
