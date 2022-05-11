@@ -1,0 +1,267 @@
+body {
+    background-color: black;
+    background-image: url("spacebggif.gif");
+}
+
+.backforward-container img {    /* fazer animation depois */
+    width: 30px;
+    height: 30px;
+    opacity: 70%;
+}
+.backforward-container .forwardarrow {
+    position: absolute;
+}
+.backforward-container img:hover {    /* fazer animation depois */
+    width: 50px;
+    height: 50px;
+    opacity: 100%;
+}
+#neptune {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    left: 5%;
+}
+.description-container article h1, p, blockquote a{
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    letter-spacing: 2px;
+}
+.description-container {
+    background-color: rgba(255, 255, 255, 0.533);
+    border-radius: 10px;
+    border: 3px solid white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    text-align: left;
+    width: 30%;
+    padding: 10px;
+    /* Positioning */
+    position: absolute;
+    bottom: 20%;
+    left: 5%;
+}
+.description-container:hover {
+    opacity: 80%;
+}
+#clickmepls {
+    position: absolute;
+    background-color: white;
+    color: black;
+    border: 30px solid white;
+    border-radius: 15px;
+    left: 65%;
+    width: 200px;
+    top: 30%;
+    animation-name: clickmeanim;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+@keyframes clickmeanim {
+    0%   { left: calc(65% - 2px); }
+    25%  { left: calc(65% - 6px); }
+    50%  { left: calc(65% - 12px); }
+    100% { left: 65% - 4px}
+}
+@keyframes vibrate {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(-1deg); }
+    20% { transform: rotate(10deg); }
+    30% { transform: rotate(0deg); }
+    40% { transform: rotate(10deg); }
+    50% { transform: rotate(-1deg); }
+    60% { transform: rotate(0deg); }
+    70% { transform: rotate(-1deg); }
+    80% { transform: rotate(10deg); }
+    90% { transform: rotate(0deg); }
+    100% { transform: rotate(-1deg); }
+  }
+  #neptune:hover {
+      animation-name: vibrate;
+      animation-iteration-count: infinite;
+      animation: vibrate 0.5s;
+  }
+  #arrowtip {
+      position: absolute;
+      top: 150px;
+      left: 30px;
+      animation-name: arrowtipanim;
+      animation-iteration-count: infinite;
+      animation-duration: 1s;
+      width: 60px;
+      height: 120px;
+  }
+
+  @keyframes arrowtipanim {
+      from {top: calc(150px - 25px);}
+      to {top: 150px;}
+  }
+
+  #arrowTextContainer {
+    width: 300px;
+    height: 50px;
+  }
+  #arrowTextContainer {
+    background-color: white;
+    border-radius: 10px;
+    border: 3px solid grey;
+    height: 15%;
+    width: 15%;
+    padding: 5px;
+    transition: width 1s linear 1s;
+    /* Positioning */
+    position: relative;
+    top: 100px;
+    left: 12%;
+    opacity: 1;
+  }
+  #arrowTextContainer p {
+    color: black;
+    letter-spacing: 1px;
+    position: relative;
+    bottom: 12px;
+    font-size: 0.8em;
+  }
+  #arrowTextContainer button{
+      margin: 3px;
+  }
+
+  #neptune2 {
+    display: block;
+    margin: 0 auto;
+    position: static;
+    width: 20%;
+  }
+  #okbtn, #okbtn2 {
+      background-color: transparent;
+  }
+
+#tourtext-container article h1, p, blockquote {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    letter-spacing: 2px;
+}
+#tourtext-container {
+    background-color: rgba(255, 255, 255, 0.533);
+    border-radius: 10px;
+    border: 3px solid white;
+    /* Positioning */
+    position: absolute;
+    width: 40%;
+    height: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    justify-content: center;
+    display: flex;
+    left: 30%;
+    bottom: 5%;
+    opacity: 1;
+}
+#tourtext-container2 {
+    background-color: rgba(255, 255, 255, 0.533);
+    border-radius: 10px;
+    border: 3px solid white;
+    /* Positioning */
+    position: absolute;
+    width: 40%;
+    height: 90%;
+    display: none;
+    flex-wrap: wrap;
+    text-align: left;
+    justify-content: center;
+    left: 30%;
+    bottom: 5%;
+}
+
+#tourtext-container2 article h1, p, blockquote {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    letter-spacing: 2px;
+}
+cite {
+    color: white;
+    font-size: 15px;
+}
+/* --- VIEWPORT ---*/
+@media screen and (max-width: 721px) {
+    .description-container article p, blockquote a{
+        font-family: 'Open Sans', sans-serif;
+        color: white;
+        letter-spacing: 1px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+    }
+    .description-container {
+        background-color: rgba(255, 255, 255, 0.533);
+        border-radius: 10px;
+        border: 3px solid white;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: left;
+        width: 80%;
+        height: 100%;
+        padding: 10px;
+        top: 2%;
+        position: absolute;
+        font-size: 16px;
+
+    }
+    cite {
+        font-size: 12px;
+    }
+    #clickmepls {
+        display: none;
+    }
+    #neptune {
+        width: 90%;
+        height: 30%;
+        top: 100px;
+    }
+    .forwardarrow {
+        left: 85%;
+        bottom: 92%;
+    }
+    #arrowTextContainer {
+        display: none;
+      }
+      #neptune2 {
+        width: 90%;
+        height: 30%;
+      }
+    
+      #tourtext-container, #tourtext-container2 p {
+        letter-spacing: 1;
+    }
+    #tourtext-container, #tourtext-container2 {
+        width: 80%;
+        left: 10%;
+        height: 100%;
+        top: 2%;
+        font-size: 13px;
+    }
+    .backforward-container img {    /* fazer animation depois */
+        width: 16px;
+        height: 16px;
+    }
+    .backforward-container img:hover {    /* fazer animation depois */
+        width: 20px;
+        height: 20px;
+        opacity: 100%;
+    }
+    .forwardarrow {
+        margin-left: 32px;
+        margin-bottom: 25px;
+    }
+    #arrowtip img{
+        width: 14px;
+        height: 19.5px;
+        position: relative;
+        right: 20px;
+        bottom: 65px;
+    }
+}
+
